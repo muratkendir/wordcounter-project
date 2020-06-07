@@ -1,0 +1,13 @@
+<h1>Count</h1>
+<a href="{% url 'homepage' %}">Return to Homepage</a>
+<h3> Your Text: </h3>
+<br />
+<div style="background-color: gray"> {{ fulltext }} </div>
+<br />
+<h3> have  {{ wordcount }} words!</h3>
+
+<h1> Sorted Word Dictionary:</h1>
+
+{% for word, counttotal in wordDictionary %}
+	<div style="border: 1px solid gray"> {{ word }} - {{ counttotal }}</div>
+{% endfor %}
